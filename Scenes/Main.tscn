@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk3xlkrv017hl"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_uqmsd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbl6n"]
+size = Vector2(1095.5, 60)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2x407"]
+radius = 18.0
+height = 76.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 323)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(578, 526)
+shape = SubResource("RectangleShape2D_hbl6n")
+debug_color = Color(0.960784, 0, 0.509804, 0.419608)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_uqmsd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(328, 447)
+shape = SubResource("CapsuleShape2D_2x407")
+debug_color = Color(0, 0.647059, 0.247059, 0.419608)
