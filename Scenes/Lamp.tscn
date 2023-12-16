@@ -1,16 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://di5g54aom711o"]
+[gd_scene load_steps=3 format=3 uid="uid://r3nqh6mi5r0g"]
 
 [ext_resource type="Texture2D" uid="uid://dq7bukmpo0h4l" path="res://Assets/Objects/Lamp.png" id="1_xuvlo"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d5o8k"]
+
 [node name="Lamp" type="Node2D"]
+position = Vector2(947, 509)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-z_index = -1
-scale = Vector2(2, 2)
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(4, -498)
+rotation = -0.809313
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(0.3, 0.3)
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(2, 650)
 texture = ExtResource("1_xuvlo")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-87, 102, 84, 103, 90, 113, 88, 137, 51, 144, -3, 146, -59, 141, -92, 132)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-275, 989, 264, 989, 297, 1022, 298, 1107, -297, 1093, -301, 1026)
+
+[node name="AttachPoint" type="RigidBody2D" parent="."]
+position = Vector2(3, -500)
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttachPoint"]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_d5o8k")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(3, -503)
+node_a = NodePath("../AttachPoint")
+node_b = NodePath("../RigidBody2D")
+bias = 0.182
+motor_target_velocity = 0.0872665

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="3_d6v50"]
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
 [ext_resource type="PackedScene" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
-[ext_resource type="PackedScene" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
+[ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
 [ext_resource type="PackedScene" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
 
 [node name="Node2D" type="Node2D"]
