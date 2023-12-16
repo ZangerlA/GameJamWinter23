@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dplqoy6x3pfgu" path="res://Assets/Objects/Chair.png" id="1_dpvpc"]
 
 [node name="Chair" type="Node2D"]
+z_index = -2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-z_index = -1
+z_index = -2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 texture = ExtResource("1_dpvpc")

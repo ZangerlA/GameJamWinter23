@@ -19,3 +19,6 @@ polygon = PackedVector2Array(-16, -56, -148, -47, -147, -40, -115, -32, -81, -31
 
 [node name="Leaf3Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-6, 65, -141, 74, -142, 83, -112, 95, -73, 94, -44, 89)
+
+[node name="PotCollision" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-48, 148, 70, 148, 57, 231, 15, 241, -32, 232)

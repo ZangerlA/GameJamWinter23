@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://3r8iiokr64wk"]
+
+[ext_resource type="Texture2D" uid="uid://b1efgpr7vn8t2" path="res://Assets/Objects/StartKitchenCounter.png" id="1_p5xkg"]
+
+[node name="StartCounter" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+z_index = -1
+texture = ExtResource("1_p5xkg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+z_index = -1
+polygon = PackedVector2Array(-749, -406, -751, 10, -237, -15, -240, 76, -109, 68, -106, 30, -86, 33, -66, 50, -53, 106, -26, 111, -21, 166, -64, 161, -66, 242, -205, 244, -197, 338, -167, 340, -172, 401, -205, 408, -200, 446, -202, 471, 110, 469, 110, 428, 148, 426, 163, 454, 168, 539, 204, 537, 204, 602, 171, 595, 173, 678, -255, 683, -260, 816, -1225, 827, -1223, -418)

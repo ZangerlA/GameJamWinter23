@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1pmvfto4ubcp"]
+
+[ext_resource type="Texture2D" uid="uid://bw8uf758w2imy" path="res://Assets/Objects/Floor.png" id="1_tutxf"]
+
+[node name="Floor" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tutxf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+z_index = -3
+polygon = PackedVector2Array(-751, 95, -519, 93, -288, 89, -136, 85, 17, 91, 89, 94, 201, 90, 289, 83, 422, 90, 564, 84, 658, 79, 749, 78, 748, 87, 652, 87, 470, 94, -23, 100, -614, 104, -752, 109)
