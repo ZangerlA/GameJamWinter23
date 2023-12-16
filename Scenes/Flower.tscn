@@ -12,9 +12,6 @@ z_index = -1
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_t17c8")
 
-[node name="Leaf3Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-6, 65, -141, 74, -142, 83, -112, 95, -73, 94, -44, 89)
-
 [node name="Leaf1Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-6, 6, 126, 4, 101, 21, 57, 33, 14, 26)
 
@@ -22,4 +19,5 @@ polygon = PackedVector2Array(-6, 6, 126, 4, 101, 21, 57, 33, 14, 26)
 polygon = PackedVector2Array(-49, 142, 72, 137, 74, 146, 65, 155, 56, 230, 37, 237, 5, 240, -32, 231, -45, 158, -52, 153)
 
 [node name="Leaf2Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1, 49)
 polygon = PackedVector2Array(-16, -56, -148, -47, -147, -40, -115, -32, -81, -31, -54, -39)
