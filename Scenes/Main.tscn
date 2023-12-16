@@ -26,7 +26,7 @@ environment = SubResource("Environment_euqcw")
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
 
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
-position = Vector2(-746, 279)
+position = Vector2(-788, 190)
 
 [node name="FloorNode" type="Node2D" parent="."]
 
@@ -52,7 +52,10 @@ position = Vector2(2287, 618)
 position = Vector2(2388, 708)
 
 [node name="StartCounter" parent="ObjectNode" instance=ExtResource("7_ep5wa")]
-position = Vector2(-388, 386)
+position = Vector2(-930, 361)
 
 [node name="Fridge" parent="ObjectNode" instance=ExtResource("8_8mjot")]
 position = Vector2(3117, 660)
+
+[node name="Fridge" parent="." instance=ExtResource("8_8mjot")]
+position = Vector2(-2221, 471)
