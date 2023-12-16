@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0cljdp2321im"]
+[gd_scene load_steps=3 format=3 uid="uid://lswudllmfwvt"]
 
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_bsgq5"]
 [ext_resource type="Texture2D" uid="uid://baot6twufhgrm" path="res://Assets/paperBackgroundEdited.jpg" id="1_okw1t"]

@@ -1,17 +1,18 @@
 [gd_scene load_steps=7 format=3 uid="uid://dk3xlkrv017hl"]
 
-[ext_resource type="PackedScene" uid="uid://b0cljdp2321im" path="res://Scenes/Background.tscn" id="2_us7qp"]
-[ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="3_d6v50"]
-[ext_resource type="PackedScene" uid="uid://bnxhfsvlp2q76" path="res://Scenes/Character.tscn" id="3_mn42b"]
-[ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
-[ext_resource type="PackedScene" uid="uid://di5g54aom711o" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
-[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
+[ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
+[ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="3_d6v50"]
+[ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
+[ext_resource type="PackedScene" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
+[ext_resource type="PackedScene" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
+[ext_resource type="PackedScene" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
 
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
+position = Vector2(18, 467)
 
 [node name="Table" parent="." instance=ExtResource("3_d6v50")]
 z_index = -1
