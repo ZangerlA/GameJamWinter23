@@ -3,7 +3,7 @@ extends CharacterBody2D
 const MAX_JUMP_VELOCITY = -1500.0  # Maximum jump velocity
 const MIN_JUMP_VELOCITY = -200.0  # Minimum jump velocity for a short press
 const MAX_CHARGE_TIME = 1.0       # Maximum time the jump can be charged
-const JUMP_HORIZONTAL_SPEED = 300.0  # Horizontal speed during jump
+const JUMP_HORIZONTAL_SPEED = 1000.0  # Horizontal speed during jump
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

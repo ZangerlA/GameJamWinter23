@@ -1,26 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk3xlkrv017hl"]
+[gd_scene load_steps=5 format=3 uid="uid://dk3xlkrv017hl"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_uqmsd"]
 [ext_resource type="Texture2D" uid="uid://bemhsvw5uejyl" path="res://Assets/Objects/Table.png" id="1_wq2fo"]
-[ext_resource type="Texture2D" uid="uid://djleo5ngbqvpb" path="res://Assets/Character/Character.png" id="2_dxo6n"]
-[ext_resource type="Texture2D" uid="uid://0ah0hj7sr1ux" path="res://Assets/paperBackground.jpg" id="3_od8a7"]
+[ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
+[ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbl6n"]
-size = Vector2(1095.5, 60)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2x407"]
-radius = 18.0
-height = 76.0
+size = Vector2(6358.75, 60)
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 323)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(578, 526)
+position = Vector2(3209.63, 526)
 shape = SubResource("RectangleShape2D_hbl6n")
 debug_color = Color(0.960784, 0, 0.509804, 0.419608)
 
@@ -29,25 +21,6 @@ position = Vector2(0, 27)
 scale = Vector2(0.55, 0.592188)
 texture = ExtResource("1_wq2fo")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_uqmsd")
+[node name="Background" parent="." instance=ExtResource("2_us7qp")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(328, 447)
-shape = SubResource("CapsuleShape2D_2x407")
-debug_color = Color(0, 0.647059, 0.247059, 0.419608)
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(331, 439)
-scale = Vector2(0.09, 0.09)
-texture = ExtResource("2_dxo6n")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="CharacterBody2D"]
-follow_viewport_enabled = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="CharacterBody2D/ParallaxBackground"]
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/ParallaxBackground/ParallaxLayer"]
-position = Vector2(445, 361)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_od8a7")
+[node name="Character" parent="." instance=ExtResource("3_mn42b")]

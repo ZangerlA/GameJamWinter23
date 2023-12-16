@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://lswudllmfwvt"]
+
+[ext_resource type="Texture2D" uid="uid://baot6twufhgrm" path="res://Assets/paperBackgroundEdited.jpg" id="1_okw1t"]
+
+[node name="Background" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(2400, 1650)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+offset_right = 16000.0
+offset_bottom = 11000.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_okw1t")
