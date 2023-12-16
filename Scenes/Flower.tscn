@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqk2hgvbmvfmo" path="res://Assets/Objects/Flower.png" id="1_t17c8"]
 
 [node name="Flower" type="Node2D"]
+z_index = -1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 z_index = -1
@@ -19,3 +20,6 @@ polygon = PackedVector2Array(-16, -56, -148, -47, -147, -40, -115, -32, -81, -31
 
 [node name="Leaf3Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-6, 65, -141, 74, -142, 83, -112, 95, -73, 94, -44, 89)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-49, 142, 72, 137, 74, 146, 65, 155, 56, 230, 37, 237, 5, 240, -32, 231, -45, 158, -52, 153)
