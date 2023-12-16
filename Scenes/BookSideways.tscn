@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://7r63kwl814f6"]
+[gd_scene load_steps=2 format=3 uid="uid://7r63kwl814f6"]
+
+[ext_resource type="Texture2D" uid="uid://f8mjn05dghgv" path="res://Assets/Objects/BookSideways.png" id="1_fpj22"]
 
 [node name="BookSideways" type="Node2D"]
+scale = Vector2(0.35, 0.35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_fpj22")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-256, -92, 274, -95, 276, 43, -250, 46)

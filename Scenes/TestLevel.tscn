@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://dq4hm36n8anv5"]
+
+[ext_resource type="PackedScene" uid="uid://dri50ocrnlgah" path="res://Scenes/Floor.tscn" id="1_cpe70"]
+[ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="2_gjar2"]
+[ext_resource type="PackedScene" uid="uid://d1hb4hmy4i5sm" path="res://Scenes/Fridge.tscn" id="3_oycu7"]
+[ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="4_hqfut"]
+[ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="5_8kalo"]
+[ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="6_71s5h"]
+[ext_resource type="PackedScene" uid="uid://7r63kwl814f6" path="res://Scenes/BookSideways.tscn" id="6_t3jxx"]
+[ext_resource type="PackedScene" uid="uid://dle84cgnyunah" path="res://Scenes/BookBack.tscn" id="7_4ihfo"]
+[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="9_8d4fw"]
+[ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="10_ybkrw"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="FloorNode" type="Node2D" parent="."]
+
+[node name="Floor" parent="FloorNode" instance=ExtResource("1_cpe70")]
+position = Vector2(670, 806)
+
+[node name="Floor2" parent="FloorNode" instance=ExtResource("1_cpe70")]
+position = Vector2(2144, 801)
+
+[node name="Floor3" parent="FloorNode" instance=ExtResource("1_cpe70")]
+position = Vector2(3636, 793)
+
+[node name="Floor4" parent="FloorNode" instance=ExtResource("1_cpe70")]
+position = Vector2(5129, 793)
+
+[node name="Floor5" parent="FloorNode" instance=ExtResource("1_cpe70")]
+position = Vector2(6524, 792)
+
+[node name="ObjectsNode" type="Node2D" parent="."]
+
+[node name="StartCounter" parent="ObjectsNode" instance=ExtResource("2_gjar2")]
+position = Vector2(-363, 158)
+
+[node name="Fridge" parent="ObjectsNode" instance=ExtResource("3_oycu7")]
+position = Vector2(-1640, 207)
+
+[node name="Flower" parent="ObjectsNode" instance=ExtResource("6_71s5h")]
+position = Vector2(2353, 720)
+
+[node name="Character" parent="." instance=ExtResource("4_hqfut")]
+position = Vector2(-214, -19)
+
+[node name="BookNode" type="Node2D" parent="."]
+
+[node name="BookSideways" parent="BookNode" instance=ExtResource("6_t3jxx")]
+position = Vector2(3072, 603)
+
+[node name="BookBack2" parent="BookNode" instance=ExtResource("7_4ihfo")]
+position = Vector2(2961, 811)
+
+[node name="BookBack3" parent="BookNode" instance=ExtResource("7_4ihfo")]
+position = Vector2(3009, 811)
+
+[node name="BookBack4" parent="BookNode" instance=ExtResource("7_4ihfo")]
+position = Vector2(3055, 808)
+
+[node name="BookBack5" parent="BookNode" instance=ExtResource("7_4ihfo")]
+position = Vector2(3100, 808)
+
+[node name="BookBack6" parent="BookNode" instance=ExtResource("7_4ihfo")]
+position = Vector2(3145, 810)
+
+[node name="BookSideways2" parent="BookNode" instance=ExtResource("6_t3jxx")]
+position = Vector2(1556, 930)
+
+[node name="BookSideways3" parent="BookNode" instance=ExtResource("6_t3jxx")]
+position = Vector2(1562, 881)
+
+[node name="BookSideways4" parent="BookNode" instance=ExtResource("6_t3jxx")]
+position = Vector2(1566, 828)
+
+[node name="Background" parent="." instance=ExtResource("5_8kalo")]
+visible = false
+
+[node name="Chair" parent="." instance=ExtResource("9_8d4fw")]
+position = Vector2(3125, 479)
+
+[node name="Fridge" parent="." instance=ExtResource("3_oycu7")]
+position = Vector2(10667, 369)
+
+[node name="Floor" parent="." instance=ExtResource("1_cpe70")]
+position = Vector2(7929, 794)
+
+[node name="Floor2" parent="." instance=ExtResource("1_cpe70")]
+position = Vector2(9327, 785)
+
+[node name="Floor3" parent="." instance=ExtResource("1_cpe70")]
+position = Vector2(10727, 778)
+
+[node name="BookSideways" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(1566, 779)
+
+[node name="Lamp" parent="." node_paths=PackedStringArray("rigidbody") instance=ExtResource("10_ybkrw")]
+position = Vector2(256, -641)
+rigidbody = NodePath("")

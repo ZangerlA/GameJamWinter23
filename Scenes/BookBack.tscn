@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://dle84cgnyunah"]
+[gd_scene load_steps=2 format=3 uid="uid://dle84cgnyunah"]
+
+[ext_resource type="Texture2D" uid="uid://hp8gymud7ot3" path="res://Assets/Objects/BookBack.png" id="1_yemlq"]
 
 [node name="BookBack2" type="Node2D"]
+z_index = -1
+scale = Vector2(0.35, 0.35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_yemlq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-81, -288, 35, -288, 31, 289, -87, 289)

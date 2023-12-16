@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dk3xlkrv017hl"]
+[gd_scene load_steps=12 format=3 uid="uid://dk3xlkrv017hl"]
 
 [ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
 [ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="3_d6v50"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
 [ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="7_ep5wa"]
 [ext_resource type="PackedScene" uid="uid://d1hb4hmy4i5sm" path="res://Scenes/Fridge.tscn" id="8_8mjot"]
+[ext_resource type="PackedScene" uid="uid://7r63kwl814f6" path="res://Scenes/BookSideways.tscn" id="9_ygwox"]
+[ext_resource type="PackedScene" uid="uid://dle84cgnyunah" path="res://Scenes/BookBack.tscn" id="10_l5wlv"]
 
 [sub_resource type="Environment" id="Environment_euqcw"]
 background_mode = 3
@@ -46,7 +48,7 @@ z_index = -1
 position = Vector2(952, 596)
 
 [node name="Flower" parent="ObjectNode" instance=ExtResource("4_tnaqh")]
-position = Vector2(2287, 618)
+position = Vector2(2324, 617)
 
 [node name="Chair" parent="ObjectNode" instance=ExtResource("6_mvh7e")]
 position = Vector2(2388, 708)
@@ -56,6 +58,20 @@ position = Vector2(-930, 361)
 
 [node name="Fridge" parent="ObjectNode" instance=ExtResource("8_8mjot")]
 position = Vector2(3117, 660)
+
+[node name="Books" type="Node2D" parent="ObjectNode"]
+
+[node name="BookSideways" parent="ObjectNode/Books" instance=ExtResource("9_ygwox")]
+position = Vector2(335, 609)
+
+[node name="BookBack2" parent="ObjectNode/Books" instance=ExtResource("10_l5wlv")]
+position = Vector2(900, 508)
+
+[node name="BookBack3" parent="ObjectNode/Books" instance=ExtResource("10_l5wlv")]
+position = Vector2(462, 513)
+
+[node name="BookBack4" parent="ObjectNode/Books" instance=ExtResource("10_l5wlv")]
+position = Vector2(1313, 509)
 
 [node name="Fridge" parent="." instance=ExtResource("8_8mjot")]
 position = Vector2(-2221, 471)
