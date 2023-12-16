@@ -1,67 +1,28 @@
-[gd_scene load_steps=10 format=3 uid="uid://dk3xlkrv017hl"]
+[gd_scene load_steps=7 format=3 uid="uid://dk3xlkrv017hl"]
 
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
 [ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="3_d6v50"]
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
 [ext_resource type="PackedScene" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
 [ext_resource type="PackedScene" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
 [ext_resource type="PackedScene" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
-=======
-[ext_resource type="PackedScene" uid="uid://b0cljdp2321im" path="res://Scenes/Background.tscn" id="2_us7qp"]
-[ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="3_d6v50"]
-[ext_resource type="PackedScene" uid="uid://bnxhfsvlp2q76" path="res://Scenes/Character.tscn" id="3_mn42b"]
-[ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
-[ext_resource type="PackedScene" uid="uid://di5g54aom711o" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
-[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
-[ext_resource type="PackedScene" uid="uid://ckk8414tp81uw" path="res://Scenes/Fridge.tscn" id="7_67iib"]
-[ext_resource type="PackedScene" uid="uid://c1pmvfto4ubcp" path="res://Scenes/Floor.tscn" id="8_6dmp8"]
-[ext_resource type="PackedScene" uid="uid://3r8iiokr64wk" path="res://Scenes/StartCounter.tscn" id="9_tpk11"]
->>>>>>> Stashed changes
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
 
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
-<<<<<<< Updated upstream
 position = Vector2(18, 467)
-=======
-position = Vector2(-676, -100)
->>>>>>> Stashed changes
 
-[node name="FloorNode" type="Node2D" parent="."]
-
-[node name="Floor4" parent="FloorNode" instance=ExtResource("8_6dmp8")]
-position = Vector2(498, 1102)
-
-[node name="Floor" parent="FloorNode" instance=ExtResource("8_6dmp8")]
-position = Vector2(2005, 1082)
-
-[node name="Floor3" parent="FloorNode" instance=ExtResource("8_6dmp8")]
-position = Vector2(5018, 1047)
-
-[node name="Floor2" parent="FloorNode" instance=ExtResource("8_6dmp8")]
-position = Vector2(3510, 1058)
-
-[node name="ObjectNode" type="Node2D" parent="."]
-
-[node name="Table" parent="ObjectNode" instance=ExtResource("3_d6v50")]
+[node name="Table" parent="." instance=ExtResource("3_d6v50")]
 z_index = -1
-position = Vector2(1201, 712)
+position = Vector2(536, 520)
 
-[node name="Flower" parent="ObjectNode" instance=ExtResource("4_tnaqh")]
-z_index = -1
-position = Vector2(2636, 678)
+[node name="Flower" parent="." instance=ExtResource("4_tnaqh")]
+position = Vector2(2759, 494)
 
-[node name="Lamp" parent="ObjectNode" instance=ExtResource("5_u5yhh")]
-position = Vector2(2206, 276)
+[node name="Lamp" parent="." instance=ExtResource("5_u5yhh")]
+position = Vector2(1715, 377)
 
-[node name="Chair" parent="ObjectNode" instance=ExtResource("6_mvh7e")]
-position = Vector2(2748, 776)
-
-[node name="Fridge" parent="ObjectNode" instance=ExtResource("7_67iib")]
-position = Vector2(3311, 683)
-
-[node name="StartCounter" parent="." instance=ExtResource("9_tpk11")]
-position = Vector2(2, 463)
+[node name="Chair" parent="." instance=ExtResource("6_mvh7e")]
+position = Vector2(2256, 628)
