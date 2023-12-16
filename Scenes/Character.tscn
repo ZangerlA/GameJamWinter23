@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl4w1x6pnka8p"]
+[gd_scene load_steps=8 format=3 uid="uid://cl4w1x6pnka8p"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_wke0p"]
-[ext_resource type="Texture2D" uid="uid://djleo5ngbqvpb" path="res://Assets/Character/Character.png" id="2_vd20b"]
+[ext_resource type="Texture2D" uid="uid://buj7klafvvs3t" path="res://Assets/Objects/CharacterWithoutNose.png" id="2_6cmy7"]
+[ext_resource type="Texture2D" uid="uid://gpjt1jg7tilk" path="res://Assets/Objects/CharacterNose.png" id="3_e774u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2x407"]
 radius = 168.0
@@ -11,6 +12,12 @@ height = 1184.0
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pxn3g"]
+radius = 40.0
+height = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x7d62"]
+
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("trajectory_line", "sprite", "label")]
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_wke0p")
@@ -19,7 +26,7 @@ sprite = NodePath("Sprite2D")
 label = NodePath("Label")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_vd20b")
+texture = ExtResource("2_6cmy7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -38,3 +45,31 @@ offset_top = -64.0
 offset_right = 57.0
 offset_bottom = -28.0
 label_settings = SubResource("LabelSettings_juidf")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(85, -20)
+collision_layer = 0
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_e774u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(25, 25)
+shape = SubResource("CapsuleShape2D_pxn3g")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(85, -15)
+node_a = NodePath("../StaticBody2D")
+node_b = NodePath("../RigidBody2D")
+angular_limit_enabled = true
+angular_limit_lower = -0.610865
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(85, -20)
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_x7d62")
