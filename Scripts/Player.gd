@@ -43,8 +43,6 @@ func _physics_process(delta):
 		velocity.x = 0
 	
 	check_fall_damage()
-	if velocity.y > 0 and not is_on_floor():
-		#animation.play("nose")
 		
 	if Input.is_action_pressed("ui_left"):
 		body.scale.x = -1

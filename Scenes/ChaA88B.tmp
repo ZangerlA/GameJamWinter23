@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cl4w1x6pnka8p"]
+[gd_scene load_steps=14 format=3 uid="uid://cl4w1x6pnka8p"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_wke0p"]
 [ext_resource type="Texture2D" uid="uid://djleo5ngbqvpb" path="res://Assets/Character/Character.png" id="2_vd20b"]
@@ -25,11 +25,19 @@ joint_one_bone2d_node = NodePath("Bone2D/Bone2D3")
 joint_two_bone_idx = 6
 joint_two_bone2d_node = NodePath("Bone2D/Bone2D3/Bone2D")
 
+[sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_vnrco"]
+target_nodepath = NodePath("../TargetNose")
+joint_one_bone_idx = 1
+joint_one_bone2d_node = NodePath("Bone2D/Bone2D")
+joint_two_bone_idx = 2
+joint_two_bone2d_node = NodePath("Bone2D/Bone2D/Bone2D")
+
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_v7bvb"]
 enabled = true
-modification_count = 2
+modification_count = 3
 modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_nelvt")
 modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_8gyvw")
+modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_vnrco")
 
 [sub_resource type="Animation" id="Animation_bqu6g"]
 resource_name = "jump_right"
@@ -798,11 +806,41 @@ tracks/20/keys = {
 "values": [Vector2(-1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_t8751"]
+resource_name = "nose"
+length = 0.2
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SkeletonContainer/TargetNose:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(85, 170), Vector2(125, 165), Vector2(165, 150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SkeletonContainer/TargetNose:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ncpo3"]
 _data = {
 "RESET": SubResource("Animation_ghc8w"),
 "jump_left": SubResource("Animation_rrhb4"),
-"jump_right": SubResource("Animation_bqu6g")
+"jump_right": SubResource("Animation_bqu6g"),
+"nose": SubResource("Animation_t8751")
 }
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("trajectory_line", "label", "animation", "body", "nose")]
@@ -880,6 +918,7 @@ rest = Transform2D(1, 0, 0, 1, 365, 1050)
 [node name="Bone2D" type="Bone2D" parent="SkeletonContainer/Skeleton2D/Bone2D"]
 position = Vector2(-9.99996, -450)
 rest = Transform2D(1, 0, 0, 1, -9.99996, -450)
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D" type="Bone2D" parent="SkeletonContainer/Skeleton2D/Bone2D/Bone2D"]
 position = Vector2(145, 80)
@@ -887,6 +926,7 @@ rest = Transform2D(1, 0, 0, 1, 145, 80)
 auto_calculate_length_and_angle = false
 length = 210.558
 bone_angle = 105.092
+metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D2" type="Bone2D" parent="SkeletonContainer/Skeleton2D/Bone2D"]
 position = Vector2(-85, 10.0001)
