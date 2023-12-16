@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://0y4ahjybm3hs"]
+
+[ext_resource type="Texture2D" uid="uid://dplqoy6x3pfgu" path="res://Assets/Objects/Chair.png" id="1_dpvpc"]
+
+[node name="Chair" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_dpvpc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-266, 127, 60, 130, 91, 66, 107, -260, 126, -256, 112, 85, 83, 170, 60, 189, -252, 199)

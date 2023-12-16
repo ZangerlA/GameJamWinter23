@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://1s1pon8kvi8g"]
+
+[ext_resource type="Texture2D" uid="uid://bqk2hgvbmvfmo" path="res://Assets/Objects/Flower.png" id="1_t17c8"]
+
+[node name="Flower" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_t17c8")
+
+[node name="Leaf1Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-6, 6, 126, 4, 101, 21, 57, 33, 14, 26)
+
+[node name="Leaf2Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-16, -56, -148, -47, -147, -40, -115, -32, -81, -31, -54, -39)
+
+[node name="Leaf3Collision" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-6, 65, -141, 74, -142, 83, -112, 95, -73, 94, -44, 89)

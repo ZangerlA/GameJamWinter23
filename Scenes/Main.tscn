@@ -1,27 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk3xlkrv017hl"]
+[gd_scene load_steps=7 format=3 uid="uid://dk3xlkrv017hl"]
 
-[ext_resource type="Texture2D" uid="uid://bemhsvw5uejyl" path="res://Assets/Objects/Table.png" id="1_wq2fo"]
-[ext_resource type="PackedScene" path="res://Scenes/Background.tscn" id="2_us7qp"]
-[ext_resource type="PackedScene" path="res://Scenes/Character.tscn" id="3_mn42b"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbl6n"]
-size = Vector2(6358.75, 60)
+[ext_resource type="PackedScene" uid="uid://b0cljdp2321im" path="res://Scenes/Background.tscn" id="2_us7qp"]
+[ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="3_d6v50"]
+[ext_resource type="PackedScene" uid="uid://bnxhfsvlp2q76" path="res://Scenes/Character.tscn" id="3_mn42b"]
+[ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
+[ext_resource type="PackedScene" uid="uid://di5g54aom711o" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
+[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3209.63, 526)
-shape = SubResource("RectangleShape2D_hbl6n")
-debug_color = Color(0.960784, 0, 0.509804, 0.419608)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(0, 27)
-scale = Vector2(0.55, 0.592188)
-texture = ExtResource("1_wq2fo")
-
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
-visible = false
 
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
+
+[node name="Table" parent="." instance=ExtResource("3_d6v50")]
+z_index = -1
+position = Vector2(536, 520)
+
+[node name="Flower" parent="." instance=ExtResource("4_tnaqh")]
+position = Vector2(2759, 494)
+
+[node name="Lamp" parent="." instance=ExtResource("5_u5yhh")]
+position = Vector2(1715, 377)
+
+[node name="Chair" parent="." instance=ExtResource("6_mvh7e")]
+position = Vector2(2256, 628)
