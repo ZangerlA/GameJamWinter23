@@ -16,27 +16,31 @@
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
 position = Vector2(-746, 279)
 
-[node name="Table" parent="." instance=ExtResource("3_d6v50")]
+[node name="FloorNode" type="Node2D" parent="."]
+
+[node name="Floor3" parent="FloorNode" instance=ExtResource("6_bi8xp")]
+position = Vector2(3025, 998)
+
+[node name="Floor2" parent="FloorNode" instance=ExtResource("6_bi8xp")]
+position = Vector2(1585, 1005)
+
+[node name="Floor" parent="FloorNode" instance=ExtResource("6_bi8xp")]
+position = Vector2(105, 1012)
+
+[node name="ObjectNode" type="Node2D" parent="."]
+
+[node name="Table" parent="ObjectNode" instance=ExtResource("3_d6v50")]
 z_index = -1
 position = Vector2(952, 596)
 
-[node name="Flower" parent="." instance=ExtResource("4_tnaqh")]
+[node name="Flower" parent="ObjectNode" instance=ExtResource("4_tnaqh")]
 position = Vector2(2287, 618)
 
-[node name="Chair" parent="." instance=ExtResource("6_mvh7e")]
+[node name="Chair" parent="ObjectNode" instance=ExtResource("6_mvh7e")]
 position = Vector2(2388, 708)
 
-[node name="Floor" parent="." instance=ExtResource("6_bi8xp")]
-position = Vector2(105, 1012)
-
-[node name="Floor2" parent="." instance=ExtResource("6_bi8xp")]
-position = Vector2(1585, 1005)
-
-[node name="Floor3" parent="." instance=ExtResource("6_bi8xp")]
-position = Vector2(3025, 998)
-
-[node name="StartCounter" parent="." instance=ExtResource("7_ep5wa")]
+[node name="StartCounter" parent="ObjectNode" instance=ExtResource("7_ep5wa")]
 position = Vector2(-388, 386)
 
-[node name="Fridge" parent="." instance=ExtResource("8_8mjot")]
+[node name="Fridge" parent="ObjectNode" instance=ExtResource("8_8mjot")]
 position = Vector2(3117, 660)
