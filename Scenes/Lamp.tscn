@@ -30,5 +30,4 @@ shape = SubResource("CircleShape2D_d5o8k")
 position = Vector2(3, -503)
 node_a = NodePath("../AttachPoint")
 node_b = NodePath("../RigidBody2D")
-bias = 0.182
 motor_target_velocity = 0.0872665

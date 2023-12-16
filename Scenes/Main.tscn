@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk3xlkrv017hl"]
+[gd_scene load_steps=6 format=3 uid="uid://dk3xlkrv017hl"]
 
 [ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
 [ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="3_d6v50"]
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
 [ext_resource type="PackedScene" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
-[ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="5_u5yhh"]
 [ext_resource type="PackedScene" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
 
 [node name="Node2D" type="Node2D"]
@@ -20,9 +19,6 @@ position = Vector2(536, 520)
 
 [node name="Flower" parent="." instance=ExtResource("4_tnaqh")]
 position = Vector2(2759, 494)
-
-[node name="Lamp" parent="." instance=ExtResource("5_u5yhh")]
-position = Vector2(1715, 377)
 
 [node name="Chair" parent="." instance=ExtResource("6_mvh7e")]
 position = Vector2(2256, 628)
