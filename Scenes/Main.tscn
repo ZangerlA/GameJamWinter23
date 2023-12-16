@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dk3xlkrv017hl"]
 
 [ext_resource type="Texture2D" uid="uid://bemhsvw5uejyl" path="res://Assets/Objects/Table.png" id="1_wq2fo"]
-[ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
-[ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
+[ext_resource type="PackedScene" path="res://Scenes/Background.tscn" id="2_us7qp"]
+[ext_resource type="PackedScene" path="res://Scenes/Character.tscn" id="3_mn42b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbl6n"]
 size = Vector2(6358.75, 60)
