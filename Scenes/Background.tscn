@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://lswudllmfwvt"]
+[gd_scene load_steps=3 format=3 uid="uid://lswudllmfwvt"]
 
+[ext_resource type="Script" path="res://Scripts/Background.gd" id="1_bsgq5"]
 [ext_resource type="Texture2D" uid="uid://baot6twufhgrm" path="res://Assets/paperBackgroundEdited.jpg" id="1_okw1t"]
 
 [node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_bsgq5")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(2400, 1650)

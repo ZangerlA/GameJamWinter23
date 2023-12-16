@@ -22,5 +22,6 @@ scale = Vector2(0.55, 0.592188)
 texture = ExtResource("1_wq2fo")
 
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
+visible = false
 
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
