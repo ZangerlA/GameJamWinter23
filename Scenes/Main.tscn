@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://dk3xlkrv017hl"]
 
 [ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
-[ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="3_d6v50"]
+[ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="3_d6v50"]
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
-[ext_resource type="PackedScene" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
-[ext_resource type="PackedScene" path="res://Scenes/Floor.tscn" id="6_bi8xp"]
-[ext_resource type="PackedScene" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
-[ext_resource type="PackedScene" path="res://Scenes/StartCounter.tscn" id="7_ep5wa"]
-[ext_resource type="PackedScene" path="res://Scenes/Fridge.tscn" id="8_8mjot"]
+[ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
+[ext_resource type="PackedScene" uid="uid://dri50ocrnlgah" path="res://Scenes/Floor.tscn" id="6_bi8xp"]
+[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
+[ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="7_ep5wa"]
+[ext_resource type="PackedScene" uid="uid://d1hb4hmy4i5sm" path="res://Scenes/Fridge.tscn" id="8_8mjot"]
 
 [sub_resource type="Environment" id="Environment_euqcw"]
 background_mode = 3
