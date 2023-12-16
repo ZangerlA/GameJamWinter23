@@ -2,12 +2,13 @@ extends CharacterBody2D
 
 const MAX_JUMP_VELOCITY = -1500.0  # Maximum jump velocity
 const MIN_JUMP_VELOCITY = -200.0  # Minimum jump velocity for a short press
-const MAX_CHARGE_TIME = 1.0       # Maximum time the jump can be charged
+const MAX_CHARGE_TIME = 2.0       # Maximum time the jump can be charged
 const JUMP_HORIZONTAL_SPEED = 1000.0  # Horizontal speed during jump
 
 @export var trajectory_line: Line2D
 @export var sprite: Sprite2D
 @export var label: Label
+@export var animation: AnimationPlayer
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -27,6 +28,7 @@ var character_weight = 3
 func _ready():
 	label.text = str(damage_taken_counter)
 	peak_height = global_position.y
+	
 
 
 func _physics_process(delta):
@@ -44,18 +46,21 @@ func _physics_process(delta):
 		jump_direction = -1
 	elif Input.is_action_pressed("ui_right"):
 		jump_direction = 1
-		sprite.flip_h = false
+		sprite.flip_h = false  
 	
 	# Handle jump charging.
 	if is_charging_jump:
 		# Increment jump charge.
 		if is_on_floor():
+			animation.play("jump")
 			jump_charge += delta
 			if jump_charge > MAX_CHARGE_TIME:
+				animation.pause()
 				jump_charge = MAX_CHARGE_TIME
 
 		# Update jump direction continuously while charging.
 	else:
+		animation.stop()
 		jump_charge = 0.0
 
 	# Handle jump execution.

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gpjt1jg7tilk"
-path="res://.godot/imported/CharacterNose.png-9be9f6b9a9257ea07615c4f2c6b9a9c2.ctex"
+path="res://.godot/imported/CharacterNose.png-b6da73501e62589ef98b83a57d9dad62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objects/CharacterNose.png"
-dest_files=["res://.godot/imported/CharacterNose.png-9be9f6b9a9257ea07615c4f2c6b9a9c2.ctex"]
+source_file="res://Assets/Character/CharacterNose.png"
+dest_files=["res://.godot/imported/CharacterNose.png-b6da73501e62589ef98b83a57d9dad62.ctex"]
 
 [params]
 
