@@ -2,14 +2,18 @@ extends CharacterBody2D
 
 const MAX_JUMP_VELOCITY = -1500.0  # Maximum jump velocity
 const MIN_JUMP_VELOCITY = -200.0  # Minimum jump velocity for a short press
-const MAX_CHARGE_TIME = 2.0       # Maximum time the jump can be charged
+const MAX_CHARGE_TIME = 1.0       # Maximum time the jump can be charged
 const JUMP_HORIZONTAL_SPEED = 1000.0  # Horizontal speed during jump
 
 @export var trajectory_line: Line2D
 @export var sprite: Sprite2D
 @export var label: Label
 @export var animation: AnimationPlayer
+@export var body: Polygon2D
+@export var nose: Polygon2D
 
+
+var isLeft = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -28,7 +32,6 @@ var character_weight = 3
 func _ready():
 	label.text = str(damage_taken_counter)
 	peak_height = global_position.y
-	
 
 
 func _physics_process(delta):
@@ -40,19 +43,35 @@ func _physics_process(delta):
 		velocity.x = 0
 	
 	check_fall_damage()
-	
+	if velocity.y > 0 and not is_on_floor():
+		#animation.play("nose")
+		
 	if Input.is_action_pressed("ui_left"):
-		sprite.flip_h = true
+		body.scale.x = -1
+		nose.scale.x = -1
 		jump_direction = -1
+		if Input.is_action_just_pressed("ui_left") && !isLeft:
+			isLeft = true
+			body.position.x += 660
+			nose.position.x += 1370
+		
 	elif Input.is_action_pressed("ui_right"):
+		body.scale.x = 1
+		nose.scale.x = 1
 		jump_direction = 1
-		sprite.flip_h = false  
+		if Input.is_action_just_pressed("ui_right") && isLeft:
+			isLeft = false
+			body.position.x -= 660
+			nose.position.x -= 1370
+		
 	
 	# Handle jump charging.
 	if is_charging_jump:
+		
 		# Increment jump charge.
 		if is_on_floor():
-			animation.play("jump")
+			animation.play("jump_right")
+			
 			jump_charge += delta
 			if jump_charge > MAX_CHARGE_TIME:
 				animation.pause()
