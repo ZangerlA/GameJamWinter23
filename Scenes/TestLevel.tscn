@@ -117,7 +117,7 @@ position = Vector2(4680, -78)
 position = Vector2(4631, -77)
 
 [node name="Stool" parent="." instance=ExtResource("11_4xjlp")]
-position = Vector2(9762, 625)
+position = Vector2(9910, 657)
 
 [node name="Flower" parent="." instance=ExtResource("6_71s5h")]
 position = Vector2(7992, 465)
@@ -197,3 +197,21 @@ position = Vector2(1611, 919)
 
 [node name="BookSideways17" parent="." instance=ExtResource("6_t3jxx")]
 position = Vector2(1506, 868)
+
+[node name="Flower3" parent="." instance=ExtResource("6_71s5h")]
+position = Vector2(10357, 510)
+
+[node name="BookSideways18" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(10303, 898)
+
+[node name="BookSideways19" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(10309, 842)
+
+[node name="BookSideways20" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(10326, 791)
+
+[node name="BookBack10" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(10465, 805)
+
+[node name="Lamp4" parent="." instance=ExtResource("10_ybkrw")]
+position = Vector2(10046, -540)
