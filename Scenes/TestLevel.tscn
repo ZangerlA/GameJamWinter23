@@ -45,7 +45,7 @@ position = Vector2(-363, 158)
 position = Vector2(1501, 591)
 
 [node name="Character" parent="." node_paths=PackedStringArray("spawn", "finish") instance=ExtResource("4_hqfut")]
-position = Vector2(11806, 194)
+position = Vector2(-211, -20)
 collision_layer = 3
 spawn = NodePath("../Spawn")
 finish = NodePath("../Finish")
