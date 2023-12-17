@@ -1,15 +1,16 @@
-[gd_scene load_steps=12 format=3 uid="uid://dk3xlkrv017hl"]
+[gd_scene load_steps=13 format=3 uid="uid://dk3xlkrv017hl"]
 
 [ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="2_us7qp"]
-[ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="3_d6v50"]
+[ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="3_d6v50"]
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
 [ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
 [ext_resource type="PackedScene" uid="uid://dri50ocrnlgah" path="res://Scenes/Floor.tscn" id="6_bi8xp"]
-[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
-[ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="7_ep5wa"]
-[ext_resource type="PackedScene" uid="uid://d1hb4hmy4i5sm" path="res://Scenes/Fridge.tscn" id="8_8mjot"]
+[ext_resource type="PackedScene" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
+[ext_resource type="PackedScene" path="res://Scenes/StartCounter.tscn" id="7_ep5wa"]
+[ext_resource type="PackedScene" path="res://Scenes/Fridge.tscn" id="8_8mjot"]
 [ext_resource type="PackedScene" uid="uid://7r63kwl814f6" path="res://Scenes/BookSideways.tscn" id="9_ygwox"]
 [ext_resource type="PackedScene" uid="uid://dle84cgnyunah" path="res://Scenes/BookBack.tscn" id="10_l5wlv"]
+[ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="11_u1rh5"]
 
 [sub_resource type="Environment" id="Environment_euqcw"]
 background_mode = 3
@@ -26,6 +27,7 @@ adjustment_saturation = 1.1
 environment = SubResource("Environment_euqcw")
 
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
+layer = -1
 
 [node name="Character" parent="." instance=ExtResource("3_mn42b")]
 position = Vector2(-788, 190)
@@ -75,3 +77,7 @@ position = Vector2(1313, 509)
 
 [node name="Fridge" parent="." instance=ExtResource("8_8mjot")]
 position = Vector2(-2221, 471)
+
+[node name="Lamp" parent="." instance=ExtResource("11_u1rh5")]
+position = Vector2(-753, -651)
+scale = Vector2(0.75, 0.75)

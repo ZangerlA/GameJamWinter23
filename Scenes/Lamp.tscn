@@ -7,12 +7,15 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_pjwlh"]
 
 [node name="Lamp" type="Node2D" node_paths=PackedStringArray("rigidbody")]
+visibility_layer = 2
 script = ExtResource("1_1on18")
 rigidbody = NodePath("RigidBody2D")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visibility_layer = 0
 position = Vector2(932, 949)
-energy = 4.35
+color = Color(1, 0, 1, 1)
+energy = 16.0
 shadow_enabled = true
 shadow_filter = 2
 texture = ExtResource("1_fokq3")

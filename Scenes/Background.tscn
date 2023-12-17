@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://baot6twufhgrm" path="res://Assets/paperBackgroundEdited.jpg" id="1_okw1t"]
 
 [node name="Background" type="ParallaxBackground"]
+layer = 1
 script = ExtResource("1_bsgq5")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
