@@ -31,12 +31,17 @@ polygon = PackedVector2Array(58, -399, 40, 391, 94, 457, 370, 448, 379, -358, 33
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(328, 27)
 stream = ExtResource("2_gd4wx")
+volume_db = -10.0
 pitch_scale = 0.8
+max_distance = 3500.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(328, 27)
 stream = ExtResource("4_enoou")
+volume_db = -10.0
 pitch_scale = 1.5
+max_distance = 3500.0
+attenuation = 0.90125
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.49
