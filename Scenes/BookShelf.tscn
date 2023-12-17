@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://k66tcnd3tgh3"]
+
+[ext_resource type="Texture2D" uid="uid://37fmgrpaqky5" path="res://Assets/Objects/BookShelf.png" id="1_o1frq"]
+
+[node name="BookShelf" type="Node2D"]
+z_index = -10
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_o1frq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(205, -740, 212, -637, -846, -658, -856.25, -156.25, -808.75, -157.5, -804, -76, -858, -61, -876.25, 587.5, 762.5, 605, 770, 466.25, 845, 462.5, 844, 892, 745, 886, 745, 685, -870, 685, -867, 886, -966, 892, -931.25, -802.5, -858.75, -808.75, -830, -755)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(775, -781, 871, -778, 868, 8, 790, 8, 790, -61, -313, -49, -310, -161.25, 790, -148.75, 784, -670, 682, -658, 677.5, -730, 771.25, -736.25)

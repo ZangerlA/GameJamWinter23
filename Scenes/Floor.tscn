@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://44ek1k0fjx24" path="res://Assets/Objects/Floor.png" id="1_tutxf"]
 
 [node name="Floor" type="Node2D"]
-z_index = -5
+z_index = -11
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
