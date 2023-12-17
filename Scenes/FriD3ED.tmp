@@ -1,27 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc3sy0qargwc2"]
+[gd_scene load_steps=5 format=3 uid="uid://dc3sy0qargwc2"]
 
 [ext_resource type="Texture2D" uid="uid://buvsvnxygub1l" path="res://Assets/Objects/Fridge.png" id="1_eq5ud"]
 [ext_resource type="Script" path="res://Scripts/Fridge.gd" id="1_uh471"]
 [ext_resource type="AudioStream" uid="uid://b0rsndeka38jb" path="res://Assets/party.wav" id="2_gd4wx"]
-[ext_resource type="Shader" path="res://Scenes/FR.gdshader" id="2_jgq71"]
 [ext_resource type="AudioStream" uid="uid://c8pa5813v6haw" path="res://Assets/party2.wav" id="4_enoou"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_hoy4f"]
-shader = ExtResource("2_jgq71")
-
-[node name="Fridge" type="Node2D" node_paths=PackedStringArray("main_audio", "second_audio", "time")]
-position = Vector2(794, 565)
+[node name="Fridge" type="Node2D" node_paths=PackedStringArray("main_audio", "second_audio")]
 script = ExtResource("1_uh471")
 main_audio = NodePath("AudioStreamPlayer2D")
 second_audio = NodePath("AudioStreamPlayer2D2")
-time = NodePath("Timer")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 z_index = -2
 scale = Vector2(1.4, 1.4)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-material = SubResource("ShaderMaterial_hoy4f")
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_eq5ud")
 
@@ -37,6 +30,3 @@ pitch_scale = 0.8
 position = Vector2(328, 27)
 stream = ExtResource("4_enoou")
 pitch_scale = 1.5
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 1.49
