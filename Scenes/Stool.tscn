@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg1f8kshpgccq"]
+
+[ext_resource type="Texture2D" uid="uid://bhdao57siv3lh" path="res://Assets/Objects/Stool.png" id="1_sware"]
+
+[node name="Stool" type="Node2D"]
+z_index = -3
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_sware")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-402, 54, 188, 38, 194, 134, -408, 146)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-288, 162, -396, 576, -250, 580, -222, 504, 54, 478, 64, 546, 66, 564, 236, 560, 96, 158)
