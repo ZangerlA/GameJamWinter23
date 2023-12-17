@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cl4w1x6pnka8p"]
+[gd_scene load_steps=13 format=3 uid="uid://cl4w1x6pnka8p"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_wke0p"]
 [ext_resource type="Texture2D" uid="uid://djleo5ngbqvpb" path="res://Assets/Character/Character.png" id="2_vd20b"]
+[ext_resource type="AudioStream" uid="uid://b154d1558s5n0" path="res://Assets/glass_break.wav" id="3_a3hb5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_juidf"]
 font_size = 32
@@ -805,7 +806,7 @@ _data = {
 "jump_right": SubResource("Animation_bqu6g")
 }
 
-[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("trajectory_line", "label", "animation", "body", "nose", "skeleton")]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("trajectory_line", "label", "animation", "body", "nose", "skeleton", "death_sound")]
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_wke0p")
 trajectory_line = NodePath("TrajectoryLine")
@@ -814,6 +815,7 @@ animation = NodePath("AnimationPlayer")
 body = NodePath("SkeletonContainer/Polygons/Body")
 nose = NodePath("SkeletonContainer/Polygons/Nose")
 skeleton = NodePath("SkeletonContainer")
+death_sound = NodePath("AudioStreamPlayer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -936,3 +938,10 @@ debug_color = Color(0, 0.647059, 0.247059, 0.419608)
 libraries = {
 "": SubResource("AnimationLibrary_ncpo3")
 }
+
+[node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_a3hb5")

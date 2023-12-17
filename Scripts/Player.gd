@@ -12,8 +12,10 @@ const JUMP_HORIZONTAL_SPEED = 1000.0  # Horizontal speed during jump
 @export var nose: Polygon2D
 @export var skeleton: Node2D
 @export var spawn: Node2D
+@export var death_sound: AudioStreamPlayer
 
 var broken_scene = preload("res://Scenes/broken.tscn")
+var broken_instance
 var isLeft = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -33,6 +35,11 @@ var character_weight = 3
 func _ready():
 	label.text = str(damage_taken_counter)
 	peak_height = global_position.y
+	
+	# Connect the Timer's timeout signal to the respawn function
+	# Connect the Timer's timeout signal to the respawn function
+	var timer = get_node("RespawnTimer")  # Adjust the path if necessary
+	timer.timeout.connect(respawn)
 
 
 func _physics_process(delta):
@@ -42,56 +49,61 @@ func _physics_process(delta):
 	else:
 		# Reset horizontal velocity when landing back on the ground.
 		velocity.x = 0
-	
+
 	check_fall_damage()
-		
+
+	# Handle character flipping and position adjustment for left/right movement
 	if Input.is_action_pressed("ui_left"):
-		body.scale.x = -1
-		nose.scale.x = -1
+		flip_character(-1)
 		jump_direction = -1
-		if Input.is_action_just_pressed("ui_left") && !isLeft:
-			isLeft = true
-			body.position.x += 660
-			nose.position.x += 1370
-		
+		if Input.is_action_just_pressed("ui_left") and !isLeft:
+			adjust_character_position_for_left()
 	elif Input.is_action_pressed("ui_right"):
-		body.scale.x = 1
-		nose.scale.x = 1
+		flip_character(1)
 		jump_direction = 1
-		if Input.is_action_just_pressed("ui_right") && isLeft:
-			isLeft = false
-			body.position.x -= 660
-			nose.position.x -= 1370
-		
-	
+		if Input.is_action_just_pressed("ui_right") and isLeft:
+			adjust_character_position_for_right()
+
 	# Handle jump charging.
-	if is_charging_jump:
-		
-		# Increment jump charge.
+	if Input.is_action_pressed("ui_accept"):
 		if is_on_floor():
+			is_charging_jump = true
 			animation.play("jump_right")
-			
 			jump_charge += delta
 			if jump_charge > MAX_CHARGE_TIME:
-				animation.pause()
 				jump_charge = MAX_CHARGE_TIME
+	elif is_charging_jump:
+		# Jump is released, execute the jump
+		execute_jump()
 
-		# Update jump direction continuously while charging.
-	else:
+	# If not charging jump and animation is playing, stop the animation
+	if not is_charging_jump and animation.is_playing():
 		animation.stop()
-		jump_charge = 0.0
-
-	# Handle jump execution.
-	if Input.is_action_just_pressed("ui_accept"):
-		is_charging_jump = true
-	elif Input.is_action_just_released("ui_accept") and is_on_floor():
-		var jump_strength = lerp(MIN_JUMP_VELOCITY, MAX_JUMP_VELOCITY, jump_charge / MAX_CHARGE_TIME)
-		velocity.y = jump_strength
-		velocity.x = JUMP_HORIZONTAL_SPEED * jump_direction
-		is_charging_jump = false
 
 	# Apply movement.
 	move_and_slide()
+
+func flip_character(direction):
+	body.scale.x = direction
+	nose.scale.x = direction
+
+func adjust_character_position_for_left():
+	isLeft = true
+	body.position.x += 660
+	nose.position.x += 1370
+
+func adjust_character_position_for_right():
+	isLeft = false
+	body.position.x -= 660
+	nose.position.x -= 1370
+
+func execute_jump():
+	var jump_strength = lerp(MIN_JUMP_VELOCITY, MAX_JUMP_VELOCITY, jump_charge / MAX_CHARGE_TIME)
+	velocity.y = jump_strength
+	velocity.x = JUMP_HORIZONTAL_SPEED * jump_direction
+	is_charging_jump = false
+	jump_charge = 0.0
+
 	
 	
 func check_fall_damage():
@@ -114,14 +126,25 @@ func check_fall_damage():
 		peak_height = global_position.y
 		
 func death():
-	var broken_instance = broken_scene.instantiate()
-
-	# Add the broken instance to the current scene (or a specific parent node if needed).
+	broken_instance = broken_scene.instantiate()
 	add_child(broken_instance)
-
-	# Position the broken instance at the player's current position.
 	broken_instance.global_position = global_position
-
-	# Make the player character invisible.
 	skeleton.visible = false
+	death_sound.play()
+	# Disable processing and physics processing
+	set_process(false)
+	set_physics_process(false)
 
+	# Start the respawn timer
+	var timer = get_node("RespawnTimer")  # Replace "Timer" with the correct path if needed
+	timer.start()
+
+
+func respawn():
+	global_position = spawn.global_position
+	skeleton.visible = true
+	remove_child(broken_instance)
+
+	# Re-enable processing and physics processing
+	set_process(true)
+	set_physics_process(true)
