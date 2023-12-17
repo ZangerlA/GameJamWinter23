@@ -6,20 +6,21 @@ const MAX_CHARGE_TIME = 1.0       # Maximum time the jump can be charged
 const JUMP_HORIZONTAL_SPEED = 1000.0  # Horizontal speed during jump
 
 @export var trajectory_line: Line2D
-@export var sprite: Sprite2D
 @export var label: Label
 @export var animation: AnimationPlayer
 @export var body: Polygon2D
 @export var nose: Polygon2D
+@export var skeleton: Node2D
+@export var spawn: Node2D
 
-
+var broken_scene = preload("res://Scenes/broken.tscn")
 var isLeft = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 # damage
 var peak_height = 0
-var fall_damage_threshold = 50
+var fall_damage_threshold = 850
 var damage_taken_counter = 0
 
 # jump parameter
@@ -106,9 +107,21 @@ func check_fall_damage():
 			print(fall_distance)
 			# The character has fallen a distance greater than the threshold, apply damage
 			# var fall_distance = global_position.y - peak_height
-			damage_taken_counter += 1
+			death()
 			label.text = str(damage_taken_counter)
 
 		# Whether we took damage or not, reset the peak height for the next jump/fall
 		peak_height = global_position.y
 		
+func death():
+	var broken_instance = broken_scene.instantiate()
+
+	# Add the broken instance to the current scene (or a specific parent node if needed).
+	add_child(broken_instance)
+
+	# Position the broken instance at the player's current position.
+	broken_instance.global_position = global_position
+
+	# Make the player character invisible.
+	skeleton.visible = false
+

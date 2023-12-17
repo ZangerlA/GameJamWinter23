@@ -29,9 +29,14 @@ environment = SubResource("Environment_euqcw")
 [node name="Background" parent="." instance=ExtResource("2_us7qp")]
 layer = -1
 
-[node name="Character" parent="." node_paths=PackedStringArray("spawn") instance=ExtResource("3_mn42b")]
+[node name="Character" parent="." node_paths=PackedStringArray("trajectory_line", "label", "animation", "body", "nose", "skeleton") instance=ExtResource("3_mn42b")]
 position = Vector2(-788, 190)
-spawn = NodePath("../Spawn")
+trajectory_line = NodePath("")
+label = NodePath("")
+animation = NodePath("")
+body = NodePath("")
+nose = NodePath("")
+skeleton = NodePath("")
 
 [node name="FloorNode" type="Node2D" parent="."]
 

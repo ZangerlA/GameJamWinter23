@@ -1,0 +1,134 @@
+[gd_scene load_steps=3 format=3 uid="uid://crfrqarmej7jl"]
+
+[ext_resource type="Texture2D" uid="uid://djleo5ngbqvpb" path="res://Assets/Character/Character.png" id="1_cemy1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_puprj"]
+radius = 61.8466
+
+[node name="Broken" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(262.376, 199.01, 360.396, 228.713, 433.663, 217.822, 430.693, 157.426, 359.406, 119.802, 282.178, 142.574)
+uv = PackedVector2Array(262.376, 199.01, 360.396, 228.713, 433.663, 217.822, 430.693, 157.426, 359.406, 119.802, 282.178, 142.574)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-2, -109)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D2"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(262.346, 198.765, 358.025, 231.482, 425.926, 206.173, 432.099, 276.543, 398.148, 354.938, 256.173, 351.852)
+uv = PackedVector2Array(262.346, 198.765, 358.025, 231.482, 425.926, 206.173, 432.099, 276.543, 398.148, 354.938, 256.173, 351.852)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(-4, -94)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D3"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(256.173, 351.235, 397.531, 354.321, 429.012, 343.21, 379.012, 430.247, 346.914, 401.852, 327.778, 451.852, 296.296, 492.593, 304.321, 430.864, 241.358, 400.617)
+uv = PackedVector2Array(256.173, 351.235, 397.531, 354.321, 429.012, 343.21, 379.012, 430.247, 346.914, 401.852, 327.778, 451.852, 296.296, 492.593, 304.321, 430.864, 241.358, 400.617)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+position = Vector2(-4, -67)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D4"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(296.629, 491.011, 333.708, 443.258, 351.124, 411.236, 388.202, 435.393, 433.146, 412.921, 498.876, 500.562, 460.112, 523.595, 391.573, 622.472, 356.742, 526.966, 235.393, 560.112, 224.719, 477.528)
+uv = PackedVector2Array(296.629, 491.011, 333.708, 443.258, 351.124, 411.236, 388.202, 435.393, 433.146, 412.921, 498.876, 500.562, 460.112, 523.595, 391.573, 622.472, 356.742, 526.966, 235.393, 560.112, 224.719, 477.528)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+position = Vector2(4, -46)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D5"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(392.135, 622.472, 356.742, 530.337, 220.786, 570.225, 207.865, 658.427, 320.786, 624.719, 353.371, 716.292, 485.393, 697.191, 589.326, 667.416, 534.831, 542.135, 451.685, 548.315)
+uv = PackedVector2Array(392.135, 622.472, 356.742, 530.337, 220.786, 570.225, 207.865, 658.427, 320.786, 624.719, 353.371, 716.292, 485.393, 697.191, 589.326, 667.416, 534.831, 542.135, 451.685, 548.315)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+position = Vector2(-7, -27)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D6"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(206.803, 663.265, 319.728, 627.211, 361.224, 725.85, 451.701, 713.605, 488.435, 824.49, 206.122, 823.809)
+uv = PackedVector2Array(206.803, 663.265, 319.728, 627.211, 361.224, 725.85, 451.701, 713.605, 488.435, 824.49, 206.122, 823.809)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+position = Vector2(-13, 2.99999)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D7" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D7"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(205.442, 825.17, 482.993, 820.408, 510.884, 927.211, 402.721, 895.238, 361.905, 956.463, 364.626, 860.544, 203.401, 874.83)
+uv = PackedVector2Array(205.442, 825.17, 482.993, 820.408, 510.884, 927.211, 402.721, 895.238, 361.905, 956.463, 364.626, 860.544, 203.401, 874.83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D7"]
+position = Vector2(10, 29)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D8" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D8"]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(363.946, 958.503, 363.946, 870.748, 217.687, 912.245, 225.85, 1070.75, 336.735, 1091.16, 529.932, 1082.99, 516.326, 850.34, 426.531, 876.871)
+uv = PackedVector2Array(363.946, 958.503, 363.946, 870.748, 217.687, 912.245, 225.85, 1070.75, 336.735, 1091.16, 529.932, 1082.99, 516.326, 850.34, 426.531, 876.871)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D8"]
+position = Vector2(0, 55)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
+
+[node name="RigidBody2D9" type="RigidBody2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="RigidBody2D9"]
+position = Vector2(-145, -95)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cemy1")
+polygon = PackedVector2Array(790.164, 442.623, 818.033, 497.541, 832.787, 571.311, 855.738, 653.279, 904.098, 678.688, 936.066, 658.197, 957.377, 618.852, 956.557, 507.377, 939.344, 430.328, 907.377, 381.967, 853.279, 405.738)
+uv = PackedVector2Array(790.164, 442.623, 818.033, 497.541, 832.787, 571.311, 855.738, 653.279, 904.098, 678.688, 936.066, 658.197, 957.377, 618.852, 956.557, 507.377, 939.344, 430.328, 907.377, 381.967, 853.279, 405.738)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D9"]
+position = Vector2(28, -4.00001)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")

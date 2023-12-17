@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bor55ofpla4es"]
+
+[ext_resource type="Texture2D" uid="uid://djleo5ngbqvpb" path="res://Assets/Character/Character.png" id="1_6ggc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_puprj"]
+radius = 195.256
+
+[node name="RigidBody2D2" type="RigidBody2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-71, -145)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_6ggc6")
+polygon = PackedVector2Array(271.429, 138.095, 236.508, 258.73, 239.683, 315.873, 195.238, 444.444, 239.683, 496.825, 473.016, 511.111, 538.095, 406.349, 531.746, 201.587, 438.095, 107.937, 279.365, 103.175)
+uv = PackedVector2Array(271.429, 138.095, 236.508, 258.73, 239.683, 315.873, 195.238, 444.444, 239.683, 496.825, 473.016, 511.111, 538.095, 406.349, 531.746, 201.587, 438.095, 107.937, 279.365, 103.175)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -83)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("CircleShape2D_puprj")
