@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://dq4hm36n8anv5"]
+[gd_scene load_steps=16 format=3 uid="uid://dq4hm36n8anv5"]
 
 [ext_resource type="PackedScene" uid="uid://dri50ocrnlgah" path="res://Scenes/Floor.tscn" id="1_cpe70"]
-[ext_resource type="PackedScene" path="res://Scenes/StartCounter.tscn" id="2_gjar2"]
-[ext_resource type="PackedScene" uid="uid://dc3sy0qargwc2" path="res://Scenes/Fridge.tscn" id="3_oycu7"]
+[ext_resource type="Script" path="res://Scripts/TestLevel.gd" id="1_ps70a"]
+[ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="2_gjar2"]
+[ext_resource type="PackedScene" uid="uid://d1hb4hmy4i5sm" path="res://Scenes/Fridge.tscn" id="3_oycu7"]
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="4_hqfut"]
 [ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="5_8kalo"]
 [ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="6_71s5h"]
@@ -11,13 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://dmfk4w75cskq8" path="res://Scenes/Chair.tscn" id="9_8d4fw"]
 [ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="10_ybkrw"]
 [ext_resource type="PackedScene" uid="uid://cg1f8kshpgccq" path="res://Scenes/Stool.tscn" id="11_4xjlp"]
-[ext_resource type="PackedScene" path="res://Scenes/Table.tscn" id="11_ddrxm"]
-[ext_resource type="PackedScene" path="res://Scenes/BookShelf.tscn" id="13_c6ctr"]
+[ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="11_ddrxm"]
+[ext_resource type="PackedScene" uid="uid://k66tcnd3tgh3" path="res://Scenes/BookShelf.tscn" id="13_c6ctr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l4hid"]
 size = Vector2(1026.5, 2010)
 
 [node name="TestLevel" type="Node2D"]
+script = ExtResource("1_ps70a")
 
 [node name="FloorNode" type="Node2D" parent="."]
 
@@ -253,3 +255,9 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
 position = Vector2(-142.25, -98)
 shape = SubResource("RectangleShape2D_l4hid")
+
+[node name="BookSideways25" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(10588, 900)
+
+[node name="BookBack13" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(10517, 749)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://br3413aliag40"]
+[gd_scene load_steps=11 format=3 uid="uid://bnfo8n2oeh63b"]
 
 [ext_resource type="Script" path="res://Scripts/EndParty.gd" id="1_735ft"]
 [ext_resource type="Shader" path="res://Scenes/EndParty.gdshader" id="1_betuu"]

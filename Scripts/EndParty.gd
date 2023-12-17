@@ -11,6 +11,7 @@ var beat_counter = 0
 var TimeInSeconds = 15
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	main_audio.play()
 	time.start()
 	time.timeout.connect(up_beat)
