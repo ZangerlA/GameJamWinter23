@@ -13,7 +13,10 @@ const JUMP_HORIZONTAL_SPEED = 1000.0  # Horizontal speed during jump
 @export var skeleton: Node2D
 @export var spawn: Node2D
 @export var death_sound: AudioStreamPlayer
+@export var finish: Area2D
+@export var end_timer: Timer
 
+var is_end = false
 var broken_scene = preload("res://Scenes/broken.tscn")
 var broken_instance
 var isLeft = false
@@ -35,11 +38,12 @@ var character_weight = 3
 func _ready():
 	label.text = str(damage_taken_counter)
 	peak_height = global_position.y
-	
+	finish.body_entered.connect(_on_FinishArea_body_entered)
 	# Connect the Timer's timeout signal to the respawn function
 	# Connect the Timer's timeout signal to the respawn function
 	var timer = get_node("RespawnTimer")  # Adjust the path if necessary
 	timer.timeout.connect(respawn)
+	end_timer.timeout.connect(restart)
 
 
 func _physics_process(delta):
@@ -115,7 +119,7 @@ func check_fall_damage():
 		# Character has landed, we need to calculate the fall distance
 		#print(peak_height, " ", global_position.y)
 		var fall_distance = global_position.y - peak_height
-		if fall_distance > fall_damage_threshold:
+		if fall_distance > fall_damage_threshold && not is_end:
 			print(fall_distance)
 			# The character has fallen a distance greater than the threshold, apply damage
 			# var fall_distance = global_position.y - peak_height
@@ -148,3 +152,13 @@ func respawn():
 	# Re-enable processing and physics processing
 	set_process(true)
 	set_physics_process(true)
+
+
+func _on_FinishArea_body_entered(body):
+	is_end = true
+	end_timer.start()
+	
+
+
+func restart():
+	get_tree().change_scene_to_file("res://Scenes/EndParty.tscn")

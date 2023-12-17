@@ -1,7 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnfo8n2oeh63b"]
+[gd_scene load_steps=8 format=3 uid="uid://br3413aliag40"]
 
+[ext_resource type="Shader" path="res://Scenes/EndParty.gdshader" id="1_betuu"]
 [ext_resource type="Texture2D" uid="uid://bs2i5odyk6hw7" path="res://Assets/Objects/EndParty2.png" id="1_yaesc"]
 [ext_resource type="Texture2D" uid="uid://dyldjcnebwrtr" path="res://Assets/Objects/EndParty.png" id="2_saks7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h5ge4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8expw"]
+shader = ExtResource("1_betuu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w8sgs"]
+shader = ExtResource("1_betuu")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4calj"]
 animations = [{
@@ -29,14 +38,17 @@ animations = [{
 }]
 
 [node name="EndParty" type="Node2D"]
+material = SubResource("ShaderMaterial_h5ge4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_8expw")
 offset_left = -684.0
 offset_top = -740.0
 offset_right = 2925.0
 offset_bottom = 1755.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_w8sgs")
 position = Vector2(1217, 721)
 scale = Vector2(0.904, 0.832)
 sprite_frames = SubResource("SpriteFrames_4calj")
