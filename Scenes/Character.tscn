@@ -807,6 +807,7 @@ _data = {
 }
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("trajectory_line", "label", "animation", "body", "nose", "skeleton", "death_sound")]
+z_index = 2
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_wke0p")
 trajectory_line = NodePath("TrajectoryLine")
@@ -891,7 +892,6 @@ position = Vector2(-85, 10.0001)
 rotation = 0.632132
 scale = Vector2(0.999934, 0.999934)
 rest = Transform2D(1, 0, 0, 1, -85, 10.0001)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D" type="Bone2D" parent="SkeletonContainer/Skeleton2D/Bone2D/Bone2D2"]
 position = Vector2(45, 70)
@@ -901,14 +901,12 @@ rest = Transform2D(1, 0, 0, 1, 45, 70)
 auto_calculate_length_and_angle = false
 length = 135.311
 bone_angle = 73.234
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D3" type="Bone2D" parent="SkeletonContainer/Skeleton2D/Bone2D"]
 position = Vector2(50, 5.00008)
 rotation = 0.730102
 scale = Vector2(0.999929, 0.999929)
 rest = Transform2D(1, 0, 0, 1, 50, 5.00008)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="Bone2D" type="Bone2D" parent="SkeletonContainer/Skeleton2D/Bone2D/Bone2D3"]
 position = Vector2(55, 70)
@@ -918,7 +916,6 @@ rest = Transform2D(1, 0, 0, 1, 55, 70)
 auto_calculate_length_and_angle = false
 length = 135.311
 bone_angle = 74.846
-metadata/_local_pose_override_enabled_ = true
 
 [node name="TargetLeft" type="Node2D" parent="SkeletonContainer"]
 position = Vector2(-115, 915)

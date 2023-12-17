@@ -11,7 +11,7 @@ var swing_range = 30.0
 
 func _physics_process(delta):
 	var rotation_threshold = 0.1  # Threshold for rotation in degrees
-	var force_strength = 50  # Strength of the force
+	var force_strength = 60  # Strength of the force
 
 	# Check if the rotation is within a certain threshold
 	if abs(rigidbody.rotation_degrees) < rotation_threshold:

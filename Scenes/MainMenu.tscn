@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://cmem3p177lr5b"]
+[gd_scene load_steps=6 format=3 uid="uid://bjah738x8hne"]
+
+[ext_resource type="Texture2D" uid="uid://w8xoi6h8vrka" path="res://Assets/Objects/MainMenuButton.png" id="1_6yuh6"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_c2367"]
+[ext_resource type="Script" path="res://Scripts/TextureButton.gd" id="2_imat0"]
+[ext_resource type="PackedScene" uid="uid://lswudllmfwvt" path="res://Scenes/Background.tscn" id="3_tekrw"]
+[ext_resource type="Texture2D" uid="uid://cgvm125bomqrs" path="res://Assets/Objects/MainMenuBackground.png" id="4_s76wh"]
 
 [node name="MainMenu" type="Node2D"]
+position = Vector2(652, -81)
+script = ExtResource("1_c2367")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1280.0
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_6yuh6")
+script = ExtResource("2_imat0")
+
+[node name="Background" parent="." instance=ExtResource("3_tekrw")]
+visible = false
+
+[node name="MainMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(367, 763)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_s76wh")
+
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="VBoxContainer/TextureButton" method="_on_pressed"]

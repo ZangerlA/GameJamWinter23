@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="6_71s5h"]
 [ext_resource type="PackedScene" uid="uid://7r63kwl814f6" path="res://Scenes/BookSideways.tscn" id="6_t3jxx"]
 [ext_resource type="PackedScene" uid="uid://dle84cgnyunah" path="res://Scenes/BookBack.tscn" id="7_4ihfo"]
-[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="9_8d4fw"]
+[ext_resource type="PackedScene" uid="uid://dmfk4w75cskq8" path="res://Scenes/Chair.tscn" id="9_8d4fw"]
 [ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="10_ybkrw"]
 [ext_resource type="PackedScene" uid="uid://cg1f8kshpgccq" path="res://Scenes/Stool.tscn" id="11_4xjlp"]
 [ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="11_ddrxm"]
@@ -42,7 +42,7 @@ position = Vector2(-363, 158)
 position = Vector2(-1640, 207)
 
 [node name="Flower" parent="ObjectsNode" instance=ExtResource("6_71s5h")]
-position = Vector2(1571, 702)
+position = Vector2(1501, 591)
 
 [node name="Character" parent="." instance=ExtResource("4_hqfut")]
 position = Vector2(-214, -19)
@@ -107,7 +107,8 @@ position = Vector2(3897, 347)
 position = Vector2(4625, -108)
 
 [node name="Lamp2" parent="." instance=ExtResource("10_ybkrw")]
-position = Vector2(4925, -1471)
+position = Vector2(5863, -1296)
+rotation = -0.0223113
 
 [node name="BookBack2" parent="." instance=ExtResource("7_4ihfo")]
 position = Vector2(4680, -78)
@@ -116,40 +117,83 @@ position = Vector2(4680, -78)
 position = Vector2(4631, -77)
 
 [node name="Stool" parent="." instance=ExtResource("11_4xjlp")]
-position = Vector2(10148, 659)
+position = Vector2(9762, 625)
 
 [node name="Flower" parent="." instance=ExtResource("6_71s5h")]
-position = Vector2(8089, 472)
+position = Vector2(7992, 465)
 
 [node name="Lamp3" parent="." instance=ExtResource("10_ybkrw")]
-position = Vector2(6167, -1454)
+position = Vector2(5254, -2102)
+rotation = 1.15168
 
 [node name="BookShelf" parent="." instance=ExtResource("13_c6ctr")]
-position = Vector2(8610, 232)
+position = Vector2(8513, 225)
 
 [node name="BookBack4" parent="." instance=ExtResource("7_4ihfo")]
-position = Vector2(9214, 13)
+position = Vector2(9117, 6)
 
 [node name="BookBack5" parent="." instance=ExtResource("7_4ihfo")]
-position = Vector2(9163, 15)
+position = Vector2(9066, 8)
 
 [node name="BookSideways2" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(9118, 693)
+position = Vector2(9021, 686)
 
 [node name="BookSideways3" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(9121, 639)
+position = Vector2(9024, 632)
 
 [node name="BookSideways4" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(8440, 87)
+position = Vector2(8343, 80)
 
 [node name="BookSideways5" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(8149, -388)
+position = Vector2(8052, -395)
 
 [node name="BookSideways6" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(8351, -388)
+position = Vector2(8254, -395)
 
 [node name="BookSideways7" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(8259, -446)
+position = Vector2(8162, -453)
 
 [node name="BookSideways8" parent="." instance=ExtResource("6_t3jxx")]
-position = Vector2(8917, 693)
+position = Vector2(8820, 686)
+
+[node name="Flower2" parent="." instance=ExtResource("6_71s5h")]
+position = Vector2(4208, 190)
+
+[node name="BookSideways9" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(544, 919)
+
+[node name="BookSideways10" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(510, 866)
+
+[node name="BookSideways11" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(521, 820)
+
+[node name="BookBack6" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(746, 835)
+
+[node name="BookBack7" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(694, 835)
+
+[node name="BookBack8" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(3244, 816)
+
+[node name="BookBack9" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(3244, 600)
+
+[node name="BookSideways12" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(3112, 896)
+
+[node name="BookSideways13" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(3110, 836)
+
+[node name="BookSideways14" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(2577, 634)
+
+[node name="BookSideways15" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(1408, 921)
+
+[node name="BookSideways16" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(1611, 919)
+
+[node name="BookSideways17" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(1506, 868)

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cl4w1x6pnka8p" path="res://Scenes/Character.tscn" id="3_mn42b"]
 [ext_resource type="PackedScene" uid="uid://1s1pon8kvi8g" path="res://Scenes/Flower.tscn" id="4_tnaqh"]
 [ext_resource type="PackedScene" uid="uid://dri50ocrnlgah" path="res://Scenes/Floor.tscn" id="6_bi8xp"]
-[ext_resource type="PackedScene" uid="uid://0y4ahjybm3hs" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
+[ext_resource type="PackedScene" uid="uid://dmfk4w75cskq8" path="res://Scenes/Chair.tscn" id="6_mvh7e"]
 [ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="7_ep5wa"]
 [ext_resource type="PackedScene" uid="uid://d1hb4hmy4i5sm" path="res://Scenes/Fridge.tscn" id="8_8mjot"]
 [ext_resource type="PackedScene" uid="uid://7r63kwl814f6" path="res://Scenes/BookSideways.tscn" id="9_ygwox"]

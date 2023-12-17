@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqk2hgvbmvfmo" path="res://Assets/Objects/Flower.png" id="1_t17c8"]
 
 [node name="Flower" type="Node2D"]
-z_index = -1
+z_index = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 z_index = -1
