@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dq4hm36n8anv5"]
+[gd_scene load_steps=14 format=3 uid="uid://dq4hm36n8anv5"]
 
 [ext_resource type="PackedScene" uid="uid://dri50ocrnlgah" path="res://Scenes/Floor.tscn" id="1_cpe70"]
 [ext_resource type="PackedScene" uid="uid://5q8b5jeddc8y" path="res://Scenes/StartCounter.tscn" id="2_gjar2"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://r3nqh6mi5r0g" path="res://Scenes/Lamp.tscn" id="10_ybkrw"]
 [ext_resource type="PackedScene" uid="uid://cg1f8kshpgccq" path="res://Scenes/Stool.tscn" id="11_4xjlp"]
 [ext_resource type="PackedScene" uid="uid://ckdedygc5p1r7" path="res://Scenes/Table.tscn" id="11_ddrxm"]
+[ext_resource type="PackedScene" uid="uid://k66tcnd3tgh3" path="res://Scenes/BookShelf.tscn" id="13_c6ctr"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -30,7 +31,7 @@ position = Vector2(3636, 793)
 position = Vector2(5129, 793)
 
 [node name="Floor5" parent="FloorNode" instance=ExtResource("1_cpe70")]
-position = Vector2(6524, 798)
+position = Vector2(6464, 798)
 
 [node name="ObjectsNode" type="Node2D" parent="."]
 
@@ -82,7 +83,7 @@ visible = false
 position = Vector2(2436, 485)
 
 [node name="Fridge" parent="." instance=ExtResource("3_oycu7")]
-position = Vector2(10667, 369)
+position = Vector2(11442, 356)
 
 [node name="Floor" parent="." instance=ExtResource("1_cpe70")]
 position = Vector2(7929, 794)
@@ -97,7 +98,7 @@ position = Vector2(10727, 778)
 position = Vector2(868, 764)
 
 [node name="Lamp" parent="." instance=ExtResource("10_ybkrw")]
-position = Vector2(2327, -1107)
+position = Vector2(2327, -1212)
 
 [node name="Table" parent="." instance=ExtResource("11_ddrxm")]
 position = Vector2(3897, 347)
@@ -115,7 +116,40 @@ position = Vector2(4680, -78)
 position = Vector2(4631, -77)
 
 [node name="Stool" parent="." instance=ExtResource("11_4xjlp")]
-position = Vector2(7081, 637)
+position = Vector2(10148, 659)
 
 [node name="Flower" parent="." instance=ExtResource("6_71s5h")]
-position = Vector2(7003, 424)
+position = Vector2(8089, 472)
+
+[node name="Lamp3" parent="." instance=ExtResource("10_ybkrw")]
+position = Vector2(6167, -1454)
+
+[node name="BookShelf" parent="." instance=ExtResource("13_c6ctr")]
+position = Vector2(8610, 232)
+
+[node name="BookBack4" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(9214, 13)
+
+[node name="BookBack5" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(9163, 15)
+
+[node name="BookSideways2" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(9118, 693)
+
+[node name="BookSideways3" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(9121, 639)
+
+[node name="BookSideways4" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(8440, 87)
+
+[node name="BookSideways5" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(8149, -388)
+
+[node name="BookSideways6" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(8351, -388)
+
+[node name="BookSideways7" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(8259, -446)
+
+[node name="BookSideways8" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(8917, 693)

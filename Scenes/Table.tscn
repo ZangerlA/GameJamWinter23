@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bemhsvw5uejyl" path="res://Assets/Objects/Table.png" id="1_hf1ih"]
 
 [node name="Table" type="Node2D"]
+z_index = -7
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
