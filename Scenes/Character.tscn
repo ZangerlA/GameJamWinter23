@@ -942,4 +942,3 @@ one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_a3hb5")
-volume_db = -20.0

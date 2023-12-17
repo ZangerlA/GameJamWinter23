@@ -38,14 +38,12 @@ position = Vector2(6464, 798)
 [node name="StartCounter" parent="ObjectsNode" instance=ExtResource("2_gjar2")]
 position = Vector2(-363, 158)
 
-[node name="Fridge" parent="ObjectsNode" instance=ExtResource("3_oycu7")]
-position = Vector2(-1640, 207)
-
 [node name="Flower" parent="ObjectsNode" instance=ExtResource("6_71s5h")]
 position = Vector2(1501, 591)
 
-[node name="Character" parent="." instance=ExtResource("4_hqfut")]
+[node name="Character" parent="." node_paths=PackedStringArray("spawn") instance=ExtResource("4_hqfut")]
 position = Vector2(-214, -19)
+spawn = NodePath("../Spawn")
 
 [node name="BookNode" type="Node2D" parent="."]
 
@@ -83,7 +81,7 @@ visible = false
 position = Vector2(2436, 485)
 
 [node name="Fridge" parent="." instance=ExtResource("3_oycu7")]
-position = Vector2(11442, 356)
+position = Vector2(12494, 338)
 
 [node name="Floor" parent="." instance=ExtResource("1_cpe70")]
 position = Vector2(7929, 794)
@@ -214,4 +212,31 @@ position = Vector2(10326, 791)
 position = Vector2(10465, 805)
 
 [node name="Lamp4" parent="." instance=ExtResource("10_ybkrw")]
-position = Vector2(10046, -540)
+position = Vector2(10113, -531)
+
+[node name="Floor4" parent="." instance=ExtResource("1_cpe70")]
+position = Vector2(11791, 776)
+
+[node name="Chair3" parent="." instance=ExtResource("9_8d4fw")]
+position = Vector2(11925, 425)
+
+[node name="BookBack11" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(11692, 465)
+
+[node name="BookSideways21" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(11808, 559)
+
+[node name="BookSideways22" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(11830, 507)
+
+[node name="BookSideways23" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(11814, 461)
+
+[node name="BookSideways24" parent="." instance=ExtResource("6_t3jxx")]
+position = Vector2(11844, 407)
+
+[node name="BookBack12" parent="." instance=ExtResource("7_4ihfo")]
+position = Vector2(11978, 469)
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(-215, -10)
